@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
-import { Navbar, Footer, Siderbar, ThemeSettings } from './components'
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorMapping, ColorPicker, Editor } from './pages' 
+import { Navbar, Footer, ThemeSettings, Sidebar } from './components'
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorMapping, ColorPicker, Editor, Line } from './pages' 
 import './App.css'
 
 const App = () => {
-    const activeMenu = false
+    const activeMenu = true
   return (
     <div>
         <BrowserRouter>
@@ -39,8 +39,8 @@ const App = () => {
                 <div>
                     <Routes>
                         {/* Dashboard */}
-                        <Route path='/' element={<ECommerce />} />
-                        <Route path='/ecommerce' element={<ECommerce />} />
+                        <Route path='/' element={<Ecommerce />} />
+                        <Route path='/ecommerce' element={<Ecommerce />} />
 
                         {/* Pages */}
                         <Route path='/orders' element={<Orders />} />
@@ -48,7 +48,7 @@ const App = () => {
                         <Route path='/customers' element={<Customers />} />
 
                         {/* Apps */}
-                        <Route path='/kanban' element={<Kanban />} /><Route path='/editor' element={<Editor />} /><Route path='/calendar' element={<Calender />} /><Route path='/color-picker' element={<ColorPicker />} />
+                        <Route path='/kanban' element={<Kanban />} /><Route path='/editor' element={<Editor />} /><Route path='/calendar' element={<Calendar />} /><Route path='/color-picker' element={<ColorPicker />} />
 
                         {/* Charts */}
                         <Route path='/line' element={<Line />} />
